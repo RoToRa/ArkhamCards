@@ -809,6 +809,16 @@ export interface UpdateCampaignAction {
   now: Date;
 }
 
+export const UPDATE_CAMPAIGN_TRAUMA = 'UPDATE_CAMPAIGN_TRAUMA';
+
+export interface UpdateCampaignTraumaAction {
+  type: typeof UPDATE_CAMPAIGN_TRAUMA;
+  id: CampaignId;
+  investigator: string;
+  trauma: Trauma;
+  now: Date;
+}
+
 export const UPDATE_CAMPAIGN_XP = 'UPDATE_CAMPAIGN_XP';
 export interface UpdateCampaignXpAction {
   type: typeof UPDATE_CAMPAIGN_XP;
@@ -1254,6 +1264,7 @@ export type CampaignActions =
   NewLinkedCampaignAction |
   UpdateCampaignAction |
   UpdateCampaignXpAction |
+  UpdateCampaignTraumaAction |
   DeleteCampaignAction |
   AddCampaignScenarioResultAction |
   EditCampaignScenarioResultAction |
